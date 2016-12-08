@@ -6,6 +6,7 @@ use Symfony\Bundle\FrameworkBundle\Test\WebTestCase;
 
 class GeneratorControllerTest extends WebTestCase
 {
+
     public function testNew()
     {
         $chords = array("C", "Dm", "Em", "F", "G", "Am", "Bdim");
@@ -19,5 +20,14 @@ class GeneratorControllerTest extends WebTestCase
             }
         }
         $this->assertEquals(true, $contains_chord);
+
+
     }
+
+    public function testKey() {
+        $client = static::createClient();
+        $crawler = $client->request('GET', '/generator/new');
+        $this->assertContains("C", $crawler->filter("body")->text());
+    }
+
 }
