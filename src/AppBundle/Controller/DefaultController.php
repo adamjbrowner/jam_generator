@@ -21,11 +21,16 @@ class DefaultController extends Controller
             ->add('key', ChoiceType::class, array(
                 'choices' => array(
                     'C' => 'C',
+                    'C#' => 'C#',
                     'D' => 'D',
+                    'Eb' => 'Eb',
                     'E' => 'E',
                     'F' => 'F',
+                    'F#' => 'F#',
                     'G' => 'G',
+                    'Ab' => 'Ab',
                     'A' => 'A',
+                    'Bb' => 'Bb',
                     'B' => 'B',
                 ),
             ))
