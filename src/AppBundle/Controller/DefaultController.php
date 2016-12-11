@@ -17,11 +17,16 @@ class DefaultController extends Controller
      */
     public function indexAction(Request $request)
     {
-        // replace this example code with whatever you need
         $form = $this->createFormBuilder()
             ->add('key', ChoiceType::class, array(
                 'choices' => array(
                     'C' => 'C',
+                    'D' => 'D',
+                    'E' => 'E',
+                    'F' => 'F',
+                    'G' => 'G',
+                    'A' => 'A',
+                    'B' => 'B',
                 ),
             ))
             ->add('save', SubmitType::class, array('label' => 'Generate'))

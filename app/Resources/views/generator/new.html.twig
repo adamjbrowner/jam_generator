@@ -1,11 +1,6 @@
-<!DOCTYPE html>
-<html>
-    <head>
-        <meta charset="utf-8">
-        <title></title>
-    </head>
-    <body>
-        Your Chord: {{ chord }}
-        key: {{ key }}
-    </body>
-</html>
+{% extends 'base.html.twig' %}
+
+{% block body %}
+Your Chord: {{ chord }}
+key: {{ key }}
+{% endblock %}

@@ -15,14 +15,12 @@ class GeneratorController extends Controller
      */
     public function newAction(Request $request)
     {
-        // replace this example code with whatever you need
         $key = $request->query->get('key');
-        $chords = array("C", "Dm", "Em", "F", "G", "Am", "Bdim");
-        $i = array_rand($chords);
-        $chord = $chords[$i];
+        $jam = $this->get('app.jam');
+        $jam->generate($key);
         return $this->render('generator/new.html.twig', array(
-            'chord' => $chord,
-            'key' => $key,
+            'chord' => $jam->chord,
+            'key' => $jam->key,
         ));
     }
 }
