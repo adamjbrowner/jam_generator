@@ -3,7 +3,7 @@ namespace AppBundle\Util;
 
 class Jam {
 
-    public function generate($key) {
+    function __construct($key) {
         $this->key = $key;
         switch ($this->key) {
             case "C":
